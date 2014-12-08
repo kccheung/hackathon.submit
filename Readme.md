@@ -1,20 +1,19 @@
-# Koding Global Virtual Hackathon's Submission Example
+[![Koding Hackathon](images/badge.png?raw=true "Koding Hackathon")](https://koding.com/Hackathon)
 
-This is a sample submission repository for the hackathon. If you don't know what that is, please [go here](https://koding.com/Hackathon). You can fork this repo and use this as a starting point.
+# World War Tank
 
 ## Description
 
-[![Koding Hackathon](/images/badge.png?raw=true "Koding Hackathon")](https://koding.com/Hackathon)
 
-A brief introduction to your project. It should include the motivation behind the project and also how it addresses the hackthon theme you've selected.
+This is a fork of juleswang's [BattleCity.AI](https://github.com/alg/battlefield) repo. This is a classic tank game with AI bots. We have tweaked the game such that player could control his tank using blockly besides keyboard control.
 
 ## Screenshots
 
-Here provide couple screenshots of your project. You can use a tool like https://monosnap.com/welcome or https://droplr.com to take a screenshot. Animated gifs are also welcome.
+Here are a couple screenshots of out project.
 
 ![Koding](https://koding.com/a/site.landing/images/slideshow/2x/ss-terminal.png "Koding")
 ![Koding](https://koding.com/a/site.landing/images/slideshow/2x/ss-ide.png "Koding")
 
 ## APIs used
 
-Provide a list of APIs you used in this project.
+1. Blockly

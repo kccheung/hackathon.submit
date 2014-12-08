@@ -1,0 +1,113 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="tank,html5,canvas,ai">
+    <title>Battle City AI</title>
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">window.onload = function(){main()}</script>
+    <xml id="toolbox" style="display: none">
+        <category name="Logic">
+          <block type="controls_if"></block>
+          <block type="controls_repeat_ext"></block>
+          <block type="logic_compare"></block>
+          <block type="math_number"></block>
+          <block type="math_arithmetic"></block>
+          <block type="text"></block>
+          <block type="text_print"></block>
+          <block type="variables_get"></block>
+          <block type="variables_set"></block>
+        </category>
+        <category name="Geomotry">
+        </category>
+        <category name="Actions">
+            <block type="move_to_direction"></block>
+            <block type="shoot"></block>
+        </category>
+        <category name="Variables">
+            <block type="tanks_count"></block>
+        </category>
+    </xml>
+    <xml id="workspace">
+        <block type="think" deletable="false"></block>
+    </xml>
+</head>
+<body >
+
+    <div class="container">
+    <div id = "srcImg">
+        <img src="img/tankAll.gif" id = "tankAll"/>
+    </div>
+
+    <div id="game">
+        <canvas id="wall" width="512" height="448"></canvas>
+        <canvas id="main" width="512" height="448"></canvas>
+        <canvas id="grass" width="512" height="448"></canvas>
+        <canvas id="upp" width="512" height="448"></canvas>
+        <canvas id="stage" width="512" height="448"></canvas>
+    </div>
+
+    <div id = "header">
+        <h1>World War Tank</h1>
+    </div>
+
+    </div>
+    <canvas id="astar" width="512" height="448" style="left:-400px; top:0; position:absolute; opacity:30%; width: 300px; height:300px;"></canvas>
+    </div>
+    <!-- <div id="blocklyDiv" style="margin-top: 500px; height: 480px; width: 600px;"></div> -->
+    <div id="blocklyDiv"></div>
+    <script type="text/javascript" src = "js/Const.js"></script>
+    <script type="text/javascript" src = "js/Sound.js"></script>
+    <script type="text/javascript" src = "js/BlockyBind.js"></script>
+    <script type="text/javascript" src = "js/Map.js"></script>
+    <script type="text/javascript" src = "js/MapLevel.js"></script>
+    <script type="text/javascript" src = "js/StageStart.js"></script>
+    <script type="text/javascript" src = "js/Sprite.js"></script>
+    <script type="text/javascript" src = "js/Score.js"></script>
+    <script type="text/javascript" src = "js/TankStart.js"></script>
+    <script type="text/javascript" src = "js/Tank.js"></script>
+    <script type="text/javascript" src = "js/MyTank.js"></script>
+    <script type="text/javascript" src = "js/Bullet.js"></script>
+    <script type="text/javascript" src = "js/HitFx.js"></script>
+    <script type="text/javascript" src = "js/BombFx.js"></script>
+    <script type="text/javascript" src = "js/Food.js"></script>
+    <script type="text/javascript" src = "js/ScoreBoard.js"></script>
+    <script type="text/javascript" src = "js/Score.js"></script>
+    <script type="text/javascript" src = "js/Num.js"></script>
+    <script type="text/javascript" src = "js/Main.js"></script>
+    <script type="text/javascript" src = "js/BinaryHeap.js"></script>
+    <script type="text/javascript" src = "js/AI.js"></script>
+    <!--Blockly-->
+    <script type="text/javascript" src="js/blockly_compressed.js"></script>
+    <script type="text/javascript" src="js/blocks_compressed.js"></script>
+    <script type="text/javascript" src="js/javascript_compressed.js"></script>
+    <script type="text/javascript" src="js/blocks.js"></script>
+    <script src="msg/js/en.js"></script>
+    <script>
+      Blockly.inject(document.getElementById('blocklyDiv'),
+          {
+            media: "media/",
+            toolbox: document.getElementById('toolbox')
+          }
+      );
+      Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, document.getElementById('workspace'));
+
+      setInterval(function(){
+        Blockly.JavaScript.init();
+        var blocks = Blockly.mainWorkspace.getTopBlocks(false);
+        var think = null;
+        if (think) {
+            var code = Blockly.JavaScript.blockToCode(blocks);
+            eval(code);
+        }
+      }, 1000);
+    </script>
+    <!--Blockly-->
+    <audio id="attack" src="sound/attack.mp3"></audio>
+    <audio id="bomb0" src="sound/bomb0.mp3"></audio>
+    <audio id="bomb1" src="sound/bomb1.mp3"></audio>
+    <audio id="food" src="sound/food.mp3"></audio>
+    <audio id="stageStart" src="sound/stageStart.mp3"></audio>
+    <audio id="shootOver" src="sound/shootOver.mp3"></audio>
+</body>
+</html>
