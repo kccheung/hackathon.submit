@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="tank,html5,canvas,ai">
-    <title>Battle City AI</title>
+    <title>Blockly Battle</title>
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
     <script type="text/javascript">window.onload = function(){main()}</script>
     <xml id="toolbox" style="display: none">
@@ -32,8 +32,7 @@
         <block type="think" deletable="false"></block>
     </xml>
 </head>
-<body >
-
+<body>
     <div class="container">
     <div id = "srcImg">
         <img src="img/tankAll.gif" id = "tankAll"/>
@@ -47,36 +46,35 @@
         <canvas id="stage" width="512" height="448"></canvas>
     </div>
 
-    <div id = "header">
-        <h1>World War Tank</h1>
+    <div id="header">
+        <h1>Blockly Battle</h1>
     </div>
 
     </div>
     <canvas id="astar" width="512" height="448" style="left:-400px; top:0; position:absolute; opacity:30%; width: 300px; height:300px;"></canvas>
     </div>
-    <!-- <div id="blocklyDiv" style="margin-top: 500px; height: 480px; width: 600px;"></div> -->
     <div id="blocklyDiv"></div>
-    <script type="text/javascript" src = "js/Const.js"></script>
-    <script type="text/javascript" src = "js/Sound.js"></script>
-    <script type="text/javascript" src = "js/BlockyBind.js"></script>
-    <script type="text/javascript" src = "js/Map.js"></script>
-    <script type="text/javascript" src = "js/MapLevel.js"></script>
-    <script type="text/javascript" src = "js/StageStart.js"></script>
-    <script type="text/javascript" src = "js/Sprite.js"></script>
-    <script type="text/javascript" src = "js/Score.js"></script>
-    <script type="text/javascript" src = "js/TankStart.js"></script>
-    <script type="text/javascript" src = "js/Tank.js"></script>
-    <script type="text/javascript" src = "js/MyTank.js"></script>
-    <script type="text/javascript" src = "js/Bullet.js"></script>
-    <script type="text/javascript" src = "js/HitFx.js"></script>
-    <script type="text/javascript" src = "js/BombFx.js"></script>
-    <script type="text/javascript" src = "js/Food.js"></script>
-    <script type="text/javascript" src = "js/ScoreBoard.js"></script>
-    <script type="text/javascript" src = "js/Score.js"></script>
-    <script type="text/javascript" src = "js/Num.js"></script>
-    <script type="text/javascript" src = "js/Main.js"></script>
-    <script type="text/javascript" src = "js/BinaryHeap.js"></script>
-    <script type="text/javascript" src = "js/AI.js"></script>
+    <script type="text/javascript" src="js/Const.js"></script>
+    <script type="text/javascript" src="js/Sound.js"></script>
+    <script type="text/javascript" src="js/BlockyBind.js"></script>
+    <script type="text/javascript" src="js/Map.js"></script>
+    <script type="text/javascript" src="js/MapLevel.js"></script>
+    <script type="text/javascript" src="js/StageStart.js"></script>
+    <script type="text/javascript" src="js/Sprite.js"></script>
+    <script type="text/javascript" src="js/Score.js"></script>
+    <script type="text/javascript" src="js/TankStart.js"></script>
+    <script type="text/javascript" src="js/Tank.js"></script>
+    <script type="text/javascript" src="js/MyTank.js"></script>
+    <script type="text/javascript" src="js/Bullet.js"></script>
+    <script type="text/javascript" src="js/HitFx.js"></script>
+    <script type="text/javascript" src="js/BombFx.js"></script>
+    <script type="text/javascript" src="js/Food.js"></script>
+    <script type="text/javascript" src="js/ScoreBoard.js"></script>
+    <script type="text/javascript" src="js/Score.js"></script>
+    <script type="text/javascript" src="js/Num.js"></script>
+    <script type="text/javascript" src="js/Main.js"></script>
+    <script type="text/javascript" src="js/BinaryHeap.js"></script>
+    <script type="text/javascript" src="js/AI.js"></script>
     <!--Blockly-->
     <script type="text/javascript" src="js/blockly_compressed.js"></script>
     <script type="text/javascript" src="js/blocks_compressed.js"></script>

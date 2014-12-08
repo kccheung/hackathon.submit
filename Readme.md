@@ -11,8 +11,8 @@ This is a fork of juleswang's [BattleCity.AI](https://github.com/alg/battlefield
 
 Here are a couple screenshots of out project.
 
-![Koding](https://koding.com/a/site.landing/images/slideshow/2x/ss-terminal.png "Koding")
-![Koding](https://koding.com/a/site.landing/images/slideshow/2x/ss-ide.png "Koding")
+![Koding](images/Screen Shot 2014-12-08 at 09.39.32.png "Koding")
+![Koding](images/Screen Shot 2014-12-08 at 09.45.07.png "Koding")
 
 ## APIs used
 
