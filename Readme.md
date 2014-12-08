@@ -1,6 +1,6 @@
 [![Koding Hackathon](images/badge.png?raw=true "Koding Hackathon")](https://koding.com/Hackathon)
 
-# World War Tank
+# Blockly Battle
 
 ## Description
 
